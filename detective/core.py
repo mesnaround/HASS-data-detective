@@ -103,7 +103,6 @@ class HassDatabase:
         query = """
         SELECT states.state,
             datetime(states.last_updated_ts, 'unixepoch', 'subsec') as last_updated_ts,
-            datetime(states.last_changed_ts, 'unixepoch', 'subsec') as last_changed_ts,
             states_meta.entity_id,
             state_attributes.shared_attrs
         FROM states
